@@ -323,13 +323,28 @@ graph TD
 
   E -->|Logout| P[🚪 Logout → Landing Page]
 
-  %% 🎨 Style Updates for Dark Mode
-  style A fill:#e0e0e0,stroke:#37474f,stroke-width:2px,color:#000
-  style B, C, D fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
-  style E fill:#bbdefb,stroke:#0d47a1,stroke-width:2px,color:#000
-  style F, G, H, I, J, K, L fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#000
-  style M, N, O fill:#ffecb3,stroke:#ffa000,stroke-width:2px,color:#000
-  style P fill:#f44336,stroke:#b71c1c,stroke-width:2px,color:#fff
+  %% 🎨 Google-Themed Vertical Legend on Left
+  subgraph Legend[Legend]
+    L1[🛬 Landing & Auth]:::blue
+    L2[🏠 Dashboard]:::red
+    L3[📜 Posts & Interactions]:::yellow
+    L4[🧑‍💻 Profile & Settings]:::green
+    L5[🚪 Logout]:::blue
+  end
+  Legend -->|Uses Google Colors| A
+
+  %% 🔹 Apply Google Colors
+  classDef blue fill:#4285F4,color:#fff
+  classDef red fill:#EA4335,color:#fff
+  classDef yellow fill:#FBBC05,color:#000
+  classDef green fill:#34A853,color:#fff
+
+  %% 🎯 Assign Colors to Sections
+  class A,B,C,D blue
+  class E red
+  class F,G,H,I,J,K,L yellow
+  class M,N,O green
+  class P blue
 ```
 
 ---
@@ -426,41 +441,6 @@ erDiagram
         DATE created_at
     }
 ```
-
----
-
-### **🔄 User Flow Diagram (UFD)**
-
-```mermaid
-graph TD
-  A[🛬 Landing Page] -->|Login 🔑| B[🔑 Login Page]
-  A -->|Register 📝| C[📝 Registration Page]
-  B -->|Forgot Password? 🔄| D[📧 Reset Password]
-  B -->|Success ✅| E[🏠 Dashboard]
-  C -->|Success ✅| E
-
-  E -->|View Posts 📜| F[📜 Blog Feed]
-  E -->|Create Post ✍️| G[✏️ Create Post]
-  F -->|Click Post 👁️| H[📖 View Post]
-  H -->|Edit Post 🛠️| I[🛠️ Edit Post]
-  H -->|Delete Post ❌| J[⚠️ Confirm Delete]
-  H -->|Comment 💬| K[💬 Add Comment]
-  H -->|Like ❤️| L[❤️ Like Post]
-
-  E -->|View Profile 🧑‍💻| M[🧑‍💻 Profile]
-  M -->|Edit Profile 🔧| N[🔧 Edit Profile]
-  E -->|Settings ⚙️| O[⚙️ Settings]
-
-  E -->|Logout 🚪| P[🚪 Logout → Landing Page]
-
-  style A fill:#f8f9fa,stroke:#37474f,stroke-width:2px
-  style B, C, D fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-  style E fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
-  style F, G, H, I, J, K, L fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
-  style M, N, O fill:#ffecb3,stroke:#ffa000,stroke-width:2px
-  style P fill:#ef9a9a,stroke:#d32f2f,stroke-width:2px
-```
-
 ---
 
 ## 🏆 Certified Technical Excellence
