@@ -19,8 +19,8 @@ graph TD
   S -->|E2E Testing| E2E[End-to-End Tests]
   S -->|Shared Libraries| L[Shared Modules]
 
-  W -->|Angular App| NG[Angular (ng)]
-  W -->|Nuxt App| NX[Nuxt (nuxi)]
+  W -->|Angular App| NG[Angular - ng]
+  W -->|Nuxt App| NX[Nuxt - nuxi]
   B -->|API Services| API[NestJS API]
   
   E2E -->|Angular Tests| NG_E2E[ng-e2e]
@@ -31,6 +31,7 @@ graph TD
   S -->|Deployment| CD[Cloud Deployment]
   NX_CI -->|Optimized Builds| CD
   NX_CI -->|Distributed Caching| C[Cache System]
+
 
 ```
 
