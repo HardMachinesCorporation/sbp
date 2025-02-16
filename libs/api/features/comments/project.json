@@ -1,0 +1,27 @@
+{
+  "name": "comments",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/features/comments/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api/features/comments",
+        "tsConfig": "libs/api/features/comments/tsconfig.lib.json",
+        "packageJson": "libs/api/features/comments/package.json",
+        "main": "libs/api/features/comments/src/index.ts",
+        "assets": ["libs/api/features/comments/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/api/features/comments/jest.config.ts"
+      }
+    }
+  }
+}

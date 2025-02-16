@@ -1,0 +1,27 @@
+{
+  "name": "search",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/infra/search/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api/infra/search",
+        "tsConfig": "libs/api/infra/search/tsconfig.lib.json",
+        "packageJson": "libs/api/infra/search/package.json",
+        "main": "libs/api/infra/search/src/index.ts",
+        "assets": ["libs/api/infra/search/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/api/infra/search/jest.config.ts"
+      }
+    }
+  }
+}

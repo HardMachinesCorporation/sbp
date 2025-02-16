@@ -15,7 +15,27 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sbp/shared": ["shared/src/index.ts"]
+      "@sbp/api/core/auth": ["libs/api/core/auth/src/index.ts"],
+      "@sbp/api/core/config": ["libs/api/core/config/src/index.ts"],
+      "@sbp/api/core/database": ["libs/api/core/database/src/index.ts"],
+      "@sbp/api/core/logger": ["libs/api/core/logger/src/index.ts"],
+      "@sbp/api/core/mailer": ["libs/api/core/mailer/src/index.ts"],
+      "@sbp/api/core/roles": ["libs/api/core/roles/src/index.ts"],
+      "@sbp/api/core/users": ["libs/api/core/users/src/index.ts"],
+      "@sbp/api/features/comments": ["libs/api/features/comments/src/index.ts"],
+      "@sbp/api/features/invites": ["libs/api/features/invites/src/index.ts"],
+      "@sbp/api/features/posts": ["libs/api/features/posts/src/index.ts"],
+      "@sbp/api/infra/audit-logs": ["libs/api/infra/audit-logs/src/index.ts"],
+      "@sbp/api/infra/notifications": [
+        "libs/api/infra/notifications/src/index.ts"
+      ],
+      "@sbp/api/infra/search": ["libs/api/infra/search/src/index.ts"],
+      "@sbp/shared": ["shared/src/index.ts"],
+      "@sbp/shared/contracts": ["libs/shared/contracts/src/index.ts"],
+      "@sbp/shared/events": ["libs/shared/events/src/index.ts"],
+      "@sbp/shared/types": ["libs/shared/types/src/index.ts"],
+      "@sbp/shared/utils": ["libs/shared/utils/src/index.ts"],
+      "@sbp/shared/validation": ["libs/shared/validation/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
