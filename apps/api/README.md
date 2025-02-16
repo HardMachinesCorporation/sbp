@@ -391,3 +391,71 @@ classDiagram
 - **Performance:** Clear ownership boundaries enable optimized query patterns
 
 This design serves as both implementation blueprint and long-term documentation for system evolution.
+
+---
+
+## Create Modules in Nest.js backend
+
+Here’s your text with carefully chosen emojis to make it more visually engaging:
+
+---
+
+### ⚙️ Generic Syntax to Create a New Nest.js Library
+
+```sh
+# 🚀 Generic Syntax  
+pnpm nx g @nx/nest:lib --name=<feature_name> --directory=apps/api/features/<feature_name> --importPath=@sbp/api/features/<feature_name>/ --buildable --service  
+# 🛠️ --buildable --service --controller are optional
+```
+
+---
+
+### 📦 Generate Feature Libraries
+
+```sh
+# 📩 Invite Feature  
+pnpm nx g @nx/nest:lib --name=invite --directory=apps/api/features/invite --importPath=@sbp/api/features/invite/ --buildable --service  
+
+# 🔔 Notification Feature  
+pnpm nx g @nx/nest:lib --name=notification --directory=apps/api/features/notification --importPath=@sbp/api/features/notification/ --buildable --service  
+
+# 📝 Post Feature  
+pnpm nx g @nx/nest:lib --name=post --directory=apps/api/features/post --importPath=@sbp/api/features/post/ --buildable --service  
+
+# 🏷️ Tag Feature  
+pnpm nx g @nx/nest:lib --name=tag --directory=apps/api/features/tag --importPath=@sbp/api/features/tag/ --buildable --service  
+
+# ❤️ Like Feature  
+pnpm nx g @nx/nest:lib --name=like --directory=apps/api/features/like --importPath=@sbp/api/features/like/ --buildable --service  
+```
+
+---
+
+### 🛑 Fixing Mistakes
+
+If you made a mistake, simply **delete the folder manually** and regenerate the library.
+
+---
+
+### 📌 Updating `tsconfig.base.json`
+
+If your Nx monorepo has a `tsconfig.base.json` file, it would include something like this:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@sbp/api/features/invite": ["libs/api/features/invite/src/index.ts"]
+    }
+  }
+}
+```
+
+### ⚠️ Important: Removing Import Path References
+Before recreating a library with the same `--importPath`, **remove its reference** in `tsconfig.base.json`, or Nx will throw an error:
+
+> ❌ *You already have a library using the import path "@sbp/api/features/invite". Make sure to specify a unique one.*
+
+---
+
+This version keeps everything unchanged while making it easier to read with well-placed emojis! 🚀 Let me know if you want any refinements. 😊

@@ -1,0 +1,27 @@
+{
+  "name": "post",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api/features/post/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/api/features/post",
+        "tsConfig": "apps/api/features/post/tsconfig.lib.json",
+        "packageJson": "apps/api/features/post/package.json",
+        "main": "apps/api/features/post/src/index.ts",
+        "assets": ["apps/api/features/post/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/api/features/post/jest.config.ts"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "invite",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api/features/invite/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/api/features/invite",
+        "tsConfig": "apps/api/features/invite/tsconfig.lib.json",
+        "packageJson": "apps/api/features/invite/package.json",
+        "main": "apps/api/features/invite/src/index.ts",
+        "assets": ["apps/api/features/invite/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/api/features/invite/jest.config.ts"
+      }
+    }
+  }
+}

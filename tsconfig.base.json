@@ -15,6 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sbp/api/features/invite/": ["apps/api/features/invite/src/index.ts"],
+      "@sbp/api/features/like/": ["apps/api/features/like/src/index.ts"],
+      "@sbp/api/features/notification/": [
+        "apps/api/features/notification/src/index.ts"
+      ],
+      "@sbp/api/features/post/": ["apps/api/features/post/src/index.ts"],
+      "@sbp/api/features/tag/": ["apps/api/features/tag/src/index.ts"],
       "@sbp/shared": ["shared/src/index.ts"]
     }
   },
