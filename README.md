@@ -323,12 +323,13 @@ graph TD
 
   E -->|Logout| P[🚪 Logout → Landing Page]
 
-  style A fill:#f8f9fa,stroke:#37474f,stroke-width:2px
-  style B, C, D fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-  style E fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
-  style F, G, H, I, J, K, L fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
-  style M, N, O fill:#ffecb3,stroke:#ffa000,stroke-width:2px
-  style P fill:#ef9a9a,stroke:#d32f2f,stroke-width:2px
+  %% 🎨 Style Updates for Dark Mode
+  style A fill:#e0e0e0,stroke:#37474f,stroke-width:2px,color:#000
+  style B, C, D fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+  style E fill:#bbdefb,stroke:#0d47a1,stroke-width:2px,color:#000
+  style F, G, H, I, J, K, L fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#000
+  style M, N, O fill:#ffecb3,stroke:#ffa000,stroke-width:2px,color:#000
+  style P fill:#f44336,stroke:#b71c1c,stroke-width:2px,color:#fff
 ```
 
 ---
