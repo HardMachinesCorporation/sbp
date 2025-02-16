@@ -1,0 +1,9 @@
+{
+  "name": "nuxi-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/web/nuxi-e2e/src",
+  "implicitDependencies": ["nuxi"],
+  "// targets": "to see all targets run: nx show project nuxi-e2e --web",
+  "targets": {}
+}
